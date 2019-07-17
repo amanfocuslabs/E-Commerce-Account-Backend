@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/rest/account")
 public class AccountController {
 
     @Autowired
@@ -24,5 +25,18 @@ public class AccountController {
     @PostMapping("/addAccount")
     public Account addAccount(@RequestBody Account account) {
         return accountService.addAccount(account);
+    }
+
+    @GetMapping("/getByUserName/{userName}")
+    public Account getByUserName(@PathVariable String userName) {
+     return accountService.getByUserName(userName);
+    }
+    @PostMapping("/update")
+    public void updateAccount(@RequestBody Account account) {
+        accountService.updateAccount(account);
+    }
+    @PostMapping("/delete/{id}")
+    public void deleteAccount(@PathVariable Long id) {
+        accountService.deleteAccount(id);
     }
 }

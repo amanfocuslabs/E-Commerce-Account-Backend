@@ -18,6 +18,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String userName;
+    private String password;
     private String email;
     private Membership membership;
     @OneToMany(cascade =CascadeType.ALL)

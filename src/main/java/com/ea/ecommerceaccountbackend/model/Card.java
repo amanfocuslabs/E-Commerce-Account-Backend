@@ -1,5 +1,6 @@
 package com.ea.ecommerceaccountbackend.model;
 
+import com.ea.ecommerceaccountbackend.Utils.CardType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

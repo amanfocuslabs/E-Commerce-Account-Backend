@@ -1,7 +1,8 @@
-package com.ea.ecommerceaccountbackend.service;
+package com.ea.ecommerceaccountbackend.service.Impl;
 
 import com.ea.ecommerceaccountbackend.model.Account;
 import com.ea.ecommerceaccountbackend.repository.AccountRepository;
+import com.ea.ecommerceaccountbackend.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +40,10 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void deleteAccount(Long id) {
         accountRepository.deleteById(id);
+    }
 
+    @Override
+    public Account getAccountByUserName(String userName) {
+        return accountRepository.findByUserName(userName);
     }
 }

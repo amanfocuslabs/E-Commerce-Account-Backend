@@ -1,5 +1,6 @@
 package com.ea.ecommerceaccountbackend.model;
 
+import com.ea.ecommerceaccountbackend.Utils.AddressType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

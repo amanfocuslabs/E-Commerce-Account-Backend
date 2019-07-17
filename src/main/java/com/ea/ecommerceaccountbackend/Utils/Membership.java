@@ -1,4 +1,4 @@
-package com.ea.ecommerceaccountbackend.model;
+package com.ea.ecommerceaccountbackend.Utils;
 
 import javax.persistence.Entity;
 

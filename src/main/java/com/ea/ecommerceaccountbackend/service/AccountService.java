@@ -10,5 +10,6 @@ public interface AccountService {
     Account addAccount(Account account);
     void updateAccount(Account account);
     void deleteAccount(Long id);
+    Account getAccountByUserName(String userName);
 
 }

@@ -24,12 +24,11 @@ public class Account {
     private String password;
     private String email;
     private Membership membership;
-    @OneToMany(cascade =CascadeType.ALL)
-    @JoinColumn(name = "AccountID")
-    private List<Address> address;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "AccountID")
-    private List<Card> cards;
+    @OneToOne(cascade =CascadeType.ALL)
+    private Address address;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Card cards;
+
 
 
 }

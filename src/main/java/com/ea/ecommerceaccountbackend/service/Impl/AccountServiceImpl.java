@@ -42,9 +42,8 @@ public class AccountServiceImpl implements AccountService {
         accountRepository.deleteById(id);
     }
 
-
     @Override
-    public Account getByUserName(String userName) {
+    public Account getAccountByUserName(String userName) {
         return accountRepository.findByUserName(userName);
     }
 }

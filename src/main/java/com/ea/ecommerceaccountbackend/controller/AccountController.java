@@ -39,7 +39,7 @@ public class AccountController {
 
     @GetMapping("getByUserName/{userName}")
     public Account getByUserName(@PathVariable String userName) {
-     return accountService.getByUserName(userName);
+     return accountService.getAccountByUserName(userName);
     }
     @PostMapping("update")
     public void updateAccount(@RequestBody Account account) {
